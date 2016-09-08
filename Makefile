@@ -18,7 +18,7 @@ all: $(NAME)
 
 $(NAME):
 	make -C libft/
-	gcc -o $(NAME) $(SRC) $(HEAD) -I./libft/include ./libft/libft.a `sdl2-config --cflags --libs`
+	gcc -o $(NAME) $(SRC) $(HEAD) -I./libft/include ./libft/libft.a -F ~/Library/Frameworks -framework SDL2  -framework SDL2_mixer -framework SDL2_net
 
 
 clean :
@@ -30,3 +30,7 @@ fclean :
 	rm -f $(NAME) $(OBJ)
 
 re : fclean all
+
+sdl_install:
+		curl https://dl.dropboxusercontent.com/u/22561204/SDL/Archive.zip > /tmp/Archive.zip
+			unzip -o /tmp/Archive.zip -d ~/Library/Frameworks/

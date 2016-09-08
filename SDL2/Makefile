@@ -1,7 +1,7 @@
 # Makefile to build and install the SDL library
 
 top_builddir = .
-srcdir  = /Users/polconin/Sobokan/SDL2-2.0.4
+srcdir  = /nfs/2015/p/pconin/e42/Sobokan/SDL2
 objects = build
 prefix = /usr/local
 exec_prefix = ${prefix}
@@ -18,9 +18,9 @@ distfile = $(distdir).tar.gz
 
 SHELL	= /bin/sh
 CC      = gcc
-INCLUDE = -Iinclude -I/Users/polconin/Sobokan/SDL2-2.0.4/include
+INCLUDE = -Iinclude -I/nfs/2015/p/pconin/e42/Sobokan/SDL2/include
 CFLAGS  = -g -O3 -DUSING_GENERATED_CONFIG_H
-EXTRA_CFLAGS = -Iinclude -I/Users/polconin/Sobokan/SDL2-2.0.4/include  -mmmx -m3dnow -msse -msse2 -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden  -I/usr/X11R6/include -D_THREAD_SAFE -fpascal-strings -Wall
+EXTRA_CFLAGS = -Iinclude -I/nfs/2015/p/pconin/e42/Sobokan/SDL2/include  -mmmx -m3dnow -msse -msse2 -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden -D_THREAD_SAFE -fpascal-strings -Wall
 LDFLAGS = 
 EXTRA_LDFLAGS =  -lm -liconv  -Wl,-framework,ForceFeedback -lobjc -Wl,-framework,CoreVideo -Wl,-framework,Cocoa -Wl,-framework,Carbon -Wl,-framework,IOKit -Wl,-framework,CoreAudio -Wl,-framework,AudioToolbox -Wl,-framework,AudioUnit
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -30,7 +30,7 @@ RANLIB	= ranlib
 WINDRES	= :
 
 TARGET  = libSDL2.la
-OBJECTS = $(objects)/SDL.lo $(objects)/SDL_assert.lo $(objects)/SDL_error.lo $(objects)/SDL_hints.lo $(objects)/SDL_log.lo $(objects)/SDL_atomic.lo $(objects)/SDL_spinlock.lo $(objects)/SDL_audio.lo $(objects)/SDL_audiocvt.lo $(objects)/SDL_audiodev.lo $(objects)/SDL_audiotypecvt.lo $(objects)/SDL_mixer.lo $(objects)/SDL_wave.lo $(objects)/SDL_cpuinfo.lo $(objects)/SDL_dynapi.lo $(objects)/SDL_clipboardevents.lo $(objects)/SDL_dropevents.lo $(objects)/SDL_events.lo $(objects)/SDL_gesture.lo $(objects)/SDL_keyboard.lo $(objects)/SDL_mouse.lo $(objects)/SDL_quit.lo $(objects)/SDL_touch.lo $(objects)/SDL_windowevents.lo $(objects)/SDL_rwops.lo $(objects)/SDL_haptic.lo $(objects)/SDL_gamecontroller.lo $(objects)/SDL_joystick.lo $(objects)/e_atan2.lo $(objects)/e_log.lo $(objects)/e_pow.lo $(objects)/e_rem_pio2.lo $(objects)/e_sqrt.lo $(objects)/k_cos.lo $(objects)/k_rem_pio2.lo $(objects)/k_sin.lo $(objects)/k_tan.lo $(objects)/s_atan.lo $(objects)/s_copysign.lo $(objects)/s_cos.lo $(objects)/s_fabs.lo $(objects)/s_floor.lo $(objects)/s_scalbn.lo $(objects)/s_sin.lo $(objects)/s_tan.lo $(objects)/SDL_power.lo $(objects)/SDL_d3dmath.lo $(objects)/SDL_render.lo $(objects)/SDL_yuv_mmx.lo $(objects)/SDL_yuv_sw.lo $(objects)/SDL_render_d3d.lo $(objects)/SDL_render_d3d11.lo $(objects)/SDL_render_gl.lo $(objects)/SDL_shaders_gl.lo $(objects)/SDL_render_gles.lo $(objects)/SDL_render_gles2.lo $(objects)/SDL_shaders_gles2.lo $(objects)/SDL_render_psp.lo $(objects)/SDL_blendfillrect.lo $(objects)/SDL_blendline.lo $(objects)/SDL_blendpoint.lo $(objects)/SDL_drawline.lo $(objects)/SDL_drawpoint.lo $(objects)/SDL_render_sw.lo $(objects)/SDL_rotate.lo $(objects)/SDL_getenv.lo $(objects)/SDL_iconv.lo $(objects)/SDL_malloc.lo $(objects)/SDL_qsort.lo $(objects)/SDL_stdlib.lo $(objects)/SDL_string.lo $(objects)/SDL_thread.lo $(objects)/SDL_timer.lo $(objects)/SDL_RLEaccel.lo $(objects)/SDL_blit.lo $(objects)/SDL_blit_0.lo $(objects)/SDL_blit_1.lo $(objects)/SDL_blit_A.lo $(objects)/SDL_blit_N.lo $(objects)/SDL_blit_auto.lo $(objects)/SDL_blit_copy.lo $(objects)/SDL_blit_slow.lo $(objects)/SDL_bmp.lo $(objects)/SDL_clipboard.lo $(objects)/SDL_egl.lo $(objects)/SDL_fillrect.lo $(objects)/SDL_pixels.lo $(objects)/SDL_rect.lo $(objects)/SDL_shape.lo $(objects)/SDL_stretch.lo $(objects)/SDL_surface.lo $(objects)/SDL_video.lo $(objects)/SDL_nullevents.lo $(objects)/SDL_nullframebuffer.lo $(objects)/SDL_nullvideo.lo $(objects)/SDL_diskaudio.lo $(objects)/SDL_dummyaudio.lo $(objects)/SDL_sysloadso.lo $(objects)/SDL_cocoaclipboard.lo $(objects)/SDL_cocoaevents.lo $(objects)/SDL_cocoakeyboard.lo $(objects)/SDL_cocoamessagebox.lo $(objects)/SDL_cocoamodes.lo $(objects)/SDL_cocoamouse.lo $(objects)/SDL_cocoamousetap.lo $(objects)/SDL_cocoaopengl.lo $(objects)/SDL_cocoashape.lo $(objects)/SDL_cocoavideo.lo $(objects)/SDL_cocoawindow.lo $(objects)/SDL_x11clipboard.lo $(objects)/SDL_x11dyn.lo $(objects)/SDL_x11events.lo $(objects)/SDL_x11framebuffer.lo $(objects)/SDL_x11keyboard.lo $(objects)/SDL_x11messagebox.lo $(objects)/SDL_x11modes.lo $(objects)/SDL_x11mouse.lo $(objects)/SDL_x11opengl.lo $(objects)/SDL_x11opengles.lo $(objects)/SDL_x11shape.lo $(objects)/SDL_x11touch.lo $(objects)/SDL_x11video.lo $(objects)/SDL_x11window.lo $(objects)/SDL_x11xinput2.lo $(objects)/edid-parse.lo $(objects)/imKStoUCS.lo $(objects)/SDL_systhread.lo $(objects)/SDL_syssem.lo $(objects)/SDL_sysmutex.lo $(objects)/SDL_syscond.lo $(objects)/SDL_systls.lo $(objects)/SDL_coreaudio.lo $(objects)/SDL_sysjoystick.lo $(objects)/SDL_syshaptic.lo $(objects)/SDL_syspower.lo $(objects)/SDL_sysfilesystem.lo $(objects)/SDL_systimer.lo $(objects)/SDL_rwopsbundlesupport.lo
+OBJECTS = $(objects)/SDL.lo $(objects)/SDL_assert.lo $(objects)/SDL_error.lo $(objects)/SDL_hints.lo $(objects)/SDL_log.lo $(objects)/SDL_atomic.lo $(objects)/SDL_spinlock.lo $(objects)/SDL_audio.lo $(objects)/SDL_audiocvt.lo $(objects)/SDL_audiodev.lo $(objects)/SDL_audiotypecvt.lo $(objects)/SDL_mixer.lo $(objects)/SDL_wave.lo $(objects)/SDL_cpuinfo.lo $(objects)/SDL_dynapi.lo $(objects)/SDL_clipboardevents.lo $(objects)/SDL_dropevents.lo $(objects)/SDL_events.lo $(objects)/SDL_gesture.lo $(objects)/SDL_keyboard.lo $(objects)/SDL_mouse.lo $(objects)/SDL_quit.lo $(objects)/SDL_touch.lo $(objects)/SDL_windowevents.lo $(objects)/SDL_rwops.lo $(objects)/SDL_haptic.lo $(objects)/SDL_gamecontroller.lo $(objects)/SDL_joystick.lo $(objects)/e_atan2.lo $(objects)/e_log.lo $(objects)/e_pow.lo $(objects)/e_rem_pio2.lo $(objects)/e_sqrt.lo $(objects)/k_cos.lo $(objects)/k_rem_pio2.lo $(objects)/k_sin.lo $(objects)/k_tan.lo $(objects)/s_atan.lo $(objects)/s_copysign.lo $(objects)/s_cos.lo $(objects)/s_fabs.lo $(objects)/s_floor.lo $(objects)/s_scalbn.lo $(objects)/s_sin.lo $(objects)/s_tan.lo $(objects)/SDL_power.lo $(objects)/SDL_d3dmath.lo $(objects)/SDL_render.lo $(objects)/SDL_yuv_mmx.lo $(objects)/SDL_yuv_sw.lo $(objects)/SDL_render_d3d.lo $(objects)/SDL_render_d3d11.lo $(objects)/SDL_render_gl.lo $(objects)/SDL_shaders_gl.lo $(objects)/SDL_render_gles.lo $(objects)/SDL_render_gles2.lo $(objects)/SDL_shaders_gles2.lo $(objects)/SDL_render_psp.lo $(objects)/SDL_blendfillrect.lo $(objects)/SDL_blendline.lo $(objects)/SDL_blendpoint.lo $(objects)/SDL_drawline.lo $(objects)/SDL_drawpoint.lo $(objects)/SDL_render_sw.lo $(objects)/SDL_rotate.lo $(objects)/SDL_getenv.lo $(objects)/SDL_iconv.lo $(objects)/SDL_malloc.lo $(objects)/SDL_qsort.lo $(objects)/SDL_stdlib.lo $(objects)/SDL_string.lo $(objects)/SDL_thread.lo $(objects)/SDL_timer.lo $(objects)/SDL_RLEaccel.lo $(objects)/SDL_blit.lo $(objects)/SDL_blit_0.lo $(objects)/SDL_blit_1.lo $(objects)/SDL_blit_A.lo $(objects)/SDL_blit_N.lo $(objects)/SDL_blit_auto.lo $(objects)/SDL_blit_copy.lo $(objects)/SDL_blit_slow.lo $(objects)/SDL_bmp.lo $(objects)/SDL_clipboard.lo $(objects)/SDL_egl.lo $(objects)/SDL_fillrect.lo $(objects)/SDL_pixels.lo $(objects)/SDL_rect.lo $(objects)/SDL_shape.lo $(objects)/SDL_stretch.lo $(objects)/SDL_surface.lo $(objects)/SDL_video.lo $(objects)/SDL_nullevents.lo $(objects)/SDL_nullframebuffer.lo $(objects)/SDL_nullvideo.lo $(objects)/SDL_diskaudio.lo $(objects)/SDL_dummyaudio.lo $(objects)/SDL_sysloadso.lo $(objects)/SDL_cocoaclipboard.lo $(objects)/SDL_cocoaevents.lo $(objects)/SDL_cocoakeyboard.lo $(objects)/SDL_cocoamessagebox.lo $(objects)/SDL_cocoamodes.lo $(objects)/SDL_cocoamouse.lo $(objects)/SDL_cocoamousetap.lo $(objects)/SDL_cocoaopengl.lo $(objects)/SDL_cocoashape.lo $(objects)/SDL_cocoavideo.lo $(objects)/SDL_cocoawindow.lo $(objects)/SDL_systhread.lo $(objects)/SDL_syssem.lo $(objects)/SDL_sysmutex.lo $(objects)/SDL_syscond.lo $(objects)/SDL_systls.lo $(objects)/SDL_coreaudio.lo $(objects)/SDL_sysjoystick.lo $(objects)/SDL_syshaptic.lo $(objects)/SDL_syspower.lo $(objects)/SDL_sysfilesystem.lo $(objects)/SDL_systimer.lo $(objects)/SDL_rwopsbundlesupport.lo
 VERSION_OBJECTS = 
 
 SDLMAIN_TARGET = libSDL2main.a
@@ -240,453 +240,402 @@ rpm: $(distfile)
 -include $(OBJECTS:.lo=.d)
 
 # Special dependency for SDL.c, since it depends on SDL_revision.h
-/Users/polconin/Sobokan/SDL2-2.0.4/src/SDL.c: update-revision
+/nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL.c: update-revision
 
-$(objects)/SDL.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/SDL.c
+$(objects)/SDL.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_assert.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/SDL_assert.c
+$(objects)/SDL_assert.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL_assert.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_error.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/SDL_error.c
+$(objects)/SDL_error.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL_error.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hints.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/SDL_hints.c
+$(objects)/SDL_hints.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL_hints.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_log.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/SDL_log.c
+$(objects)/SDL_log.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/SDL_log.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_atomic.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/atomic/SDL_atomic.c
+$(objects)/SDL_atomic.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/atomic/SDL_atomic.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_spinlock.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/atomic/SDL_spinlock.c
+$(objects)/SDL_spinlock.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/atomic/SDL_spinlock.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audio.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_audio.c
+$(objects)/SDL_audio.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_audio.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiocvt.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_audiocvt.c
+$(objects)/SDL_audiocvt.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_audiocvt.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiodev.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_audiodev.c
+$(objects)/SDL_audiodev.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_audiodev.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiotypecvt.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_audiotypecvt.c
+$(objects)/SDL_audiotypecvt.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_audiotypecvt.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mixer.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_mixer.c
+$(objects)/SDL_mixer.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_mixer.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_wave.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/SDL_wave.c
+$(objects)/SDL_wave.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/SDL_wave.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cpuinfo.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/cpuinfo/SDL_cpuinfo.c
+$(objects)/SDL_cpuinfo.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/cpuinfo/SDL_cpuinfo.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dynapi.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/dynapi/SDL_dynapi.c
+$(objects)/SDL_dynapi.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/dynapi/SDL_dynapi.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboardevents.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_clipboardevents.c
+$(objects)/SDL_clipboardevents.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_clipboardevents.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dropevents.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_dropevents.c
+$(objects)/SDL_dropevents.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_dropevents.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_events.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_events.c
+$(objects)/SDL_events.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_events.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gesture.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_gesture.c
+$(objects)/SDL_gesture.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_gesture.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_keyboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_keyboard.c
+$(objects)/SDL_keyboard.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_keyboard.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mouse.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_mouse.c
+$(objects)/SDL_mouse.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_mouse.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_quit.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_quit.c
+$(objects)/SDL_quit.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_quit.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_touch.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_touch.c
+$(objects)/SDL_touch.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_touch.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_windowevents.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/events/SDL_windowevents.c
+$(objects)/SDL_windowevents.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/events/SDL_windowevents.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rwops.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/file/SDL_rwops.c
+$(objects)/SDL_rwops.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/file/SDL_rwops.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_haptic.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/haptic/SDL_haptic.c
+$(objects)/SDL_haptic.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/haptic/SDL_haptic.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gamecontroller.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/joystick/SDL_gamecontroller.c
+$(objects)/SDL_gamecontroller.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/joystick/SDL_gamecontroller.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_joystick.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/joystick/SDL_joystick.c
+$(objects)/SDL_joystick.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/joystick/SDL_joystick.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_atan2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/e_atan2.c
+$(objects)/e_atan2.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/e_atan2.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_log.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/e_log.c
+$(objects)/e_log.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/e_log.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_pow.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/e_pow.c
+$(objects)/e_pow.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/e_pow.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_rem_pio2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/e_rem_pio2.c
+$(objects)/e_rem_pio2.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/e_rem_pio2.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_sqrt.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/e_sqrt.c
+$(objects)/e_sqrt.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/e_sqrt.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_cos.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/k_cos.c
+$(objects)/k_cos.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/k_cos.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_rem_pio2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/k_rem_pio2.c
+$(objects)/k_rem_pio2.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/k_rem_pio2.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_sin.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/k_sin.c
+$(objects)/k_sin.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/k_sin.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_tan.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/k_tan.c
+$(objects)/k_tan.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/k_tan.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_atan.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_atan.c
+$(objects)/s_atan.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_atan.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_copysign.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_copysign.c
+$(objects)/s_copysign.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_copysign.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_cos.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_cos.c
+$(objects)/s_cos.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_cos.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_fabs.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_fabs.c
+$(objects)/s_fabs.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_fabs.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_floor.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_floor.c
+$(objects)/s_floor.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_floor.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_scalbn.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_scalbn.c
+$(objects)/s_scalbn.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_scalbn.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_sin.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_sin.c
+$(objects)/s_sin.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_sin.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_tan.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/libm/s_tan.c
+$(objects)/s_tan.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/libm/s_tan.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_power.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/power/SDL_power.c
+$(objects)/SDL_power.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/power/SDL_power.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_d3dmath.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/SDL_d3dmath.c
+$(objects)/SDL_d3dmath.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/SDL_d3dmath.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/SDL_render.c
+$(objects)/SDL_render.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/SDL_render.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv_mmx.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/SDL_yuv_mmx.c
+$(objects)/SDL_yuv_mmx.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/SDL_yuv_mmx.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv_sw.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/SDL_yuv_sw.c
+$(objects)/SDL_yuv_sw.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/SDL_yuv_sw.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/direct3d/SDL_render_d3d.c
+$(objects)/SDL_render_d3d.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/direct3d/SDL_render_d3d.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d11.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/direct3d11/SDL_render_d3d11.c
+$(objects)/SDL_render_d3d11.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/direct3d11/SDL_render_d3d11.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gl.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/opengl/SDL_render_gl.c
+$(objects)/SDL_render_gl.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/opengl/SDL_render_gl.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gl.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/opengl/SDL_shaders_gl.c
+$(objects)/SDL_shaders_gl.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/opengl/SDL_shaders_gl.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/opengles/SDL_render_gles.c
+$(objects)/SDL_render_gles.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/opengles/SDL_render_gles.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/opengles2/SDL_render_gles2.c
+$(objects)/SDL_render_gles2.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/opengles2/SDL_render_gles2.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gles2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/opengles2/SDL_shaders_gles2.c
+$(objects)/SDL_shaders_gles2.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/opengles2/SDL_shaders_gles2.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_psp.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/psp/SDL_render_psp.c
+$(objects)/SDL_render_psp.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/psp/SDL_render_psp.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendfillrect.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_blendfillrect.c
+$(objects)/SDL_blendfillrect.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_blendfillrect.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendline.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_blendline.c
+$(objects)/SDL_blendline.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_blendline.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendpoint.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_blendpoint.c
+$(objects)/SDL_blendpoint.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_blendpoint.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawline.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_drawline.c
+$(objects)/SDL_drawline.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_drawline.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawpoint.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_drawpoint.c
+$(objects)/SDL_drawpoint.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_drawpoint.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_sw.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_render_sw.c
+$(objects)/SDL_render_sw.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_render_sw.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rotate.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/render/software/SDL_rotate.c
+$(objects)/SDL_rotate.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/render/software/SDL_rotate.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_getenv.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_getenv.c
+$(objects)/SDL_getenv.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_getenv.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_iconv.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_iconv.c
+$(objects)/SDL_iconv.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_iconv.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_malloc.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_malloc.c
+$(objects)/SDL_malloc.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_malloc.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_qsort.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_qsort.c
+$(objects)/SDL_qsort.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_qsort.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stdlib.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_stdlib.c
+$(objects)/SDL_stdlib.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_stdlib.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_string.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/stdlib/SDL_string.c
+$(objects)/SDL_string.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/stdlib/SDL_string.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_thread.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/SDL_thread.c
+$(objects)/SDL_thread.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/SDL_thread.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_timer.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/timer/SDL_timer.c
+$(objects)/SDL_timer.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/timer/SDL_timer.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_RLEaccel.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_RLEaccel.c
+$(objects)/SDL_RLEaccel.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_RLEaccel.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit.c
+$(objects)/SDL_blit.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_0.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_0.c
+$(objects)/SDL_blit_0.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_0.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_1.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_1.c
+$(objects)/SDL_blit_1.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_1.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_A.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_A.c
+$(objects)/SDL_blit_A.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_A.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_N.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_N.c
+$(objects)/SDL_blit_N.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_N.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_auto.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_auto.c
+$(objects)/SDL_blit_auto.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_auto.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_copy.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_copy.c
+$(objects)/SDL_blit_copy.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_copy.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_slow.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_blit_slow.c
+$(objects)/SDL_blit_slow.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_blit_slow.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_bmp.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_bmp.c
+$(objects)/SDL_bmp.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_bmp.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_clipboard.c
+$(objects)/SDL_clipboard.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_clipboard.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_egl.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_egl.c
+$(objects)/SDL_egl.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_egl.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_fillrect.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_fillrect.c
+$(objects)/SDL_fillrect.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_fillrect.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_pixels.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_pixels.c
+$(objects)/SDL_pixels.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_pixels.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rect.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_rect.c
+$(objects)/SDL_rect.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_rect.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shape.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_shape.c
+$(objects)/SDL_shape.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_shape.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stretch.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_stretch.c
+$(objects)/SDL_stretch.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_stretch.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_surface.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_surface.c
+$(objects)/SDL_surface.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_surface.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_video.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/SDL_video.c
+$(objects)/SDL_video.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/SDL_video.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullevents.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/dummy/SDL_nullevents.c
+$(objects)/SDL_nullevents.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/dummy/SDL_nullevents.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullframebuffer.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/dummy/SDL_nullframebuffer.c
+$(objects)/SDL_nullframebuffer.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/dummy/SDL_nullframebuffer.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullvideo.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/dummy/SDL_nullvideo.c
+$(objects)/SDL_nullvideo.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/dummy/SDL_nullvideo.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_diskaudio.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/disk/SDL_diskaudio.c
+$(objects)/SDL_diskaudio.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/disk/SDL_diskaudio.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dummyaudio.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/dummy/SDL_dummyaudio.c
+$(objects)/SDL_dummyaudio.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/dummy/SDL_dummyaudio.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysloadso.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/loadso/dlopen/SDL_sysloadso.c
+$(objects)/SDL_sysloadso.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/loadso/dlopen/SDL_sysloadso.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaclipboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoaclipboard.m
+$(objects)/SDL_cocoaclipboard.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoaclipboard.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaevents.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoaevents.m
+$(objects)/SDL_cocoaevents.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoaevents.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoakeyboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoakeyboard.m
+$(objects)/SDL_cocoakeyboard.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoakeyboard.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamessagebox.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoamessagebox.m
+$(objects)/SDL_cocoamessagebox.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoamessagebox.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamodes.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoamodes.m
+$(objects)/SDL_cocoamodes.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoamodes.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamouse.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoamouse.m
+$(objects)/SDL_cocoamouse.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoamouse.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamousetap.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoamousetap.m
+$(objects)/SDL_cocoamousetap.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoamousetap.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaopengl.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoaopengl.m
+$(objects)/SDL_cocoaopengl.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoaopengl.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoashape.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoashape.m
+$(objects)/SDL_cocoashape.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoashape.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoavideo.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoavideo.m
+$(objects)/SDL_cocoavideo.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoavideo.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoawindow.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/cocoa/SDL_cocoawindow.m
+$(objects)/SDL_cocoawindow.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/video/cocoa/SDL_cocoawindow.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11clipboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11clipboard.c
+$(objects)/SDL_systhread.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/pthread/SDL_systhread.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11dyn.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11dyn.c
+$(objects)/SDL_syssem.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/pthread/SDL_syssem.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11events.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11events.c
+$(objects)/SDL_sysmutex.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/pthread/SDL_sysmutex.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11framebuffer.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11framebuffer.c
+$(objects)/SDL_syscond.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/pthread/SDL_syscond.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11keyboard.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11keyboard.c
+$(objects)/SDL_systls.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/thread/pthread/SDL_systls.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11messagebox.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11messagebox.c
+$(objects)/SDL_coreaudio.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/audio/coreaudio/SDL_coreaudio.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11modes.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11modes.c
+$(objects)/SDL_sysjoystick.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/joystick/darwin/SDL_sysjoystick.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11mouse.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11mouse.c
+$(objects)/SDL_syshaptic.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/haptic/darwin/SDL_syshaptic.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11opengl.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11opengl.c
+$(objects)/SDL_syspower.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/power/macosx/SDL_syspower.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11opengles.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11opengles.c
+$(objects)/SDL_sysfilesystem.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/filesystem/cocoa/SDL_sysfilesystem.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11shape.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11shape.c
+$(objects)/SDL_systimer.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/timer/unix/SDL_systimer.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11touch.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11touch.c
+$(objects)/SDL_rwopsbundlesupport.lo: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/file/cocoa/SDL_rwopsbundlesupport.m
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11video.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11video.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_x11window.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11window.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_x11xinput2.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/SDL_x11xinput2.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/edid-parse.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/edid-parse.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/imKStoUCS.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/video/x11/imKStoUCS.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_systhread.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/pthread/SDL_systhread.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_syssem.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/pthread/SDL_syssem.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_sysmutex.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/pthread/SDL_sysmutex.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_syscond.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/pthread/SDL_syscond.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_systls.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/thread/pthread/SDL_systls.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_coreaudio.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/audio/coreaudio/SDL_coreaudio.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_sysjoystick.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/joystick/darwin/SDL_sysjoystick.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_syshaptic.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/haptic/darwin/SDL_syshaptic.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_syspower.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/power/macosx/SDL_syspower.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_sysfilesystem.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/filesystem/cocoa/SDL_sysfilesystem.m
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_systimer.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/timer/unix/SDL_systimer.c
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_rwopsbundlesupport.lo: /Users/polconin/Sobokan/SDL2-2.0.4/src/file/cocoa/SDL_rwopsbundlesupport.m
-	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
 
-$(objects)/SDL_dummy_main.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/main/dummy/SDL_dummy_main.c
+$(objects)/SDL_dummy_main.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/main/dummy/SDL_dummy_main.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_test_assert.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_assert.c
+$(objects)/SDL_test_assert.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_assert.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_common.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_common.c
+$(objects)/SDL_test_common.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_common.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_compare.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_compare.c
+$(objects)/SDL_test_compare.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_compare.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_crc32.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_crc32.c
+$(objects)/SDL_test_crc32.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_crc32.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_font.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_font.c
+$(objects)/SDL_test_font.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_font.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_fuzzer.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_fuzzer.c
+$(objects)/SDL_test_fuzzer.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_fuzzer.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_harness.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_harness.c
+$(objects)/SDL_test_harness.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_harness.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlit.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_imageBlit.c
+$(objects)/SDL_test_imageBlit.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_imageBlit.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlitBlend.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_imageBlitBlend.c
+$(objects)/SDL_test_imageBlitBlend.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_imageBlitBlend.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageFace.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_imageFace.c
+$(objects)/SDL_test_imageFace.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_imageFace.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitives.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_imagePrimitives.c
+$(objects)/SDL_test_imagePrimitives.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_imagePrimitives.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitivesBlend.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_imagePrimitivesBlend.c
+$(objects)/SDL_test_imagePrimitivesBlend.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_imagePrimitivesBlend.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_log.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_log.c
+$(objects)/SDL_test_log.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_log.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_md5.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_md5.c
+$(objects)/SDL_test_md5.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_md5.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_random.o: /Users/polconin/Sobokan/SDL2-2.0.4/src/test/SDL_test_random.c
+$(objects)/SDL_test_random.o: /nfs/2015/p/pconin/e42/Sobokan/SDL2/src/test/SDL_test_random.c
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
